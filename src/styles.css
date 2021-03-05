@@ -1,0 +1,33 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.swal2-styled.swal2-confirm, .swal2-styled.swal2-confirm:focus {
+    padding: 2px 18px;
+    font-weight: normal;
+    background-color: #65dc6e;
+    box-shadow: none;
+}
+
+.swal2-styled.swal2-confirm:hover {
+    padding: 2px 18px;
+    font-weight: normal;
+    background-image: none!important;
+    background-color: #55e461;
+    box-shadow: 0 0 0 0.2rem rgb(65 236 79 / 35%);
+}
+
+.swal2-close {
+    font-size: 2rem;
+    color: rgb(99, 98, 98);
+    font-weight: normal;
+}
+
+.swal2-close:focus, .swal2-close:hover {
+    box-shadow: none;
+    color: rgb(226, 79, 79);
+}
+
+#swal2-content {
+    padding-bottom: 20px;
+}
