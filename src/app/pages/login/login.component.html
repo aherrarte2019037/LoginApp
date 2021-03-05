@@ -1,0 +1,64 @@
+<div class="limiteranimated animated__fast fadeInLeft">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <form class="login100-form validate-form flex-sb flex-w" (ngSubmit)="onSubmit( loginForm )" #loginForm="ngForm">
+
+                <span class="login100-form-title p-b-51">
+                    Iniciar Sesión
+                </span>
+
+                <div class="d-flex justify-content-center flex-grow-1">
+                    <span style="font-size: 14px" *ngIf="loginForm.submitted && loginForm.controls.email.invalid" class="text-danger animated fadeIn mb-1">Nombre obligatorio</span>
+                </div>
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" 
+                           type="email" 
+                           name="email" 
+                           placeholder="Correo"
+                           [(ngModel)]="user.email"
+                           required
+                           email>
+
+                    <span class="focus-input100"></span>
+                </div>
+                
+                <div class="d-flex justify-content-center flex-grow-1">
+                    <span style="font-size: 14px" *ngIf="loginForm.submitted && loginForm.controls.pass.invalid" class="text-danger animated fadeIn mb-1">Mínimo 6 caracteres</span>
+                </div>
+                <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                    <input class="input100"
+                           type="password" 
+                           name="pass" 
+                           placeholder="Contraseña"
+                           [(ngModel)]="user.password"
+                           required
+                           minlength="6">
+                    <span class="focus-input100"></span>
+                </div>
+                
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div class="contact100-form-checkbox">
+                        <input [(ngModel)]="remindUser" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Recordar correo
+                        </label>
+                    </div>
+
+                    <div>
+                        <a routerLink="/register" class="txt1">
+                            ¿No tienes cuenta?
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
